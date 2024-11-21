@@ -68,10 +68,13 @@ function playGame() {
 
     if (humanScore > computerScore) {
         alert("You won the game! The score was " + humanScore + " - " + computerScore);
+        console.log("You won the game! The score was " + humanScore + " - " + computerScore);
     } else if (humanScore < computerScore) {
         alert("You lost the game. The score was " + humanScore + " - " + computerScore);
+        console.log("You lost the game. The score was " + humanScore + " - " + computerScore);
     } else {
-        alert("The game was a draw.")
+        alert("The game was a draw.");
+        console.log("The game was a draw.");
     }
 }
 
