@@ -48,7 +48,7 @@ function playRound(humanChoice,computerChoice) {
 // function that plays 5 rounds
 function playGame() {
 
-    const rounds = 5;
+    const rounds = 3;
 
     for (let i = 0; i < rounds; i++) {
         console.log(humanScore);
@@ -86,5 +86,9 @@ let computerScore = 0;
 let computerChoice;
 let humanChoice;
 
-console.log(playGame());
+//console.log(playGame());
+
+// when the rock button is clicked set humanChoice = rock and playRound
+
+
 
