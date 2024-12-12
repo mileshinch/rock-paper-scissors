@@ -20,7 +20,6 @@ function playRound(humanChoice,computerChoice) {
         (humanChoice == 'paper' && computerChoice == 'rock')
         ) {
 
-        alert("You win! " + humanChoice + " beats " + computerChoice);
         console.log("You win! " + humanChoice + " beats " + computerChoice);
 
         humanScore = humanScore + 1
@@ -33,14 +32,12 @@ function playRound(humanChoice,computerChoice) {
         (computerChoice == 'paper' && humanChoice == 'rock')
     ) {
 
-        alert("You lose! " + computerChoice + " beats " + humanChoice);
         console.log("You lose! " + computerChoice + " beats " + humanChoice);
 
         computerScore = computerScore + 1
 
     } else {
 
-        alert("That round was a draw.");
         console.log("That round was a draw.");
     }
 }
@@ -88,7 +85,37 @@ let humanChoice;
 
 //console.log(playGame());
 
-// when the rock button is clicked set humanChoice = rock and playRound
+
+// create a javascript object which references all buttons
+const buttons = document.querySelectorAll("button");
+
+// iterate through the buttons
+buttons.forEach((button) => {
+    // add event listener for each one
+    button.addEventListener("click", () => {
+        
+        // set humanChoice to the button value
+        humanChoice = button.value
+        console.log("you picked " + humanChoice)
+
+        // get computer choice
+        computerChoice = getComputerChoice()
+        console.log("the computer picked " + computerChoice)
+
+        // play a round
+        playRound(humanChoice,computerChoice)
+
+        // record commentary
+
+        // record running score
+    })
+})
+
+
+
+    // sets the human choice variable to the appropriate value
+
+    // then it plays a round
 
 
 
