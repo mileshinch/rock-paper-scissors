@@ -105,9 +105,24 @@ buttons.forEach((button) => {
         // play a round
         playRound(humanChoice,computerChoice)
 
-        // record commentary
+        // RUNNING SCORE
+        // create references to score spans
+        // overwrite the humanScore and computerScore spans
 
-        // record running score
+
+        // COMMENTARY
+        // create reference to commentary div
+        const commentary = document.querySelector(".commentary")
+        // create new div to be appended
+        const roundSummary = document.createElement("div")
+        // get summary of round
+        let text = 'You chose ' + humanChoice + '. The computer chose ' + computerChoice
+        // set text of that div
+        roundSummary.innerText = text;
+        // append to commentary div
+        commentary.appendChild(roundSummary)
+
+        
     })
 })
 
