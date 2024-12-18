@@ -107,7 +107,11 @@ buttons.forEach((button) => {
 
         // RUNNING SCORE
         // create references to score spans
+        const humanRunningScore = document.querySelector(".humanScore")
+        const computerRunningScore = document.querySelector(".computerScore")
         // overwrite the humanScore and computerScore spans
+        humanRunningScore.innerText = humanScore
+        computerRunningScore.innerText = computerScore
 
 
         // COMMENTARY
